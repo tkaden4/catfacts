@@ -1,0 +1,30 @@
+{
+  "name": "catfacts",
+  "version": "0.1.0",
+  "description": "Always have cat facts on hand, inspired by Kyle",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "parcel build src/index.pug -d docs",
+    "devel": "parcel src/index.pug"
+  },
+  "keywords": [],
+  "author": "Kaden Thomas",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
+    "parcel": "1.10.2",
+    "rimraf": "2.6.2"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "3.0.8",
+    "node-sass": "4.9.3",
+    "normalize.css": "8.0.0",
+    "pug": "2.0.3",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "rxjs": "6.3.3",
+    "skeleton.css": "2.0.4"
+  }
+}
