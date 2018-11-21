@@ -2,10 +2,13 @@ import React from "react";
 
 import "./Index.scss";
 
+import logo from "../../assets/logo.svg";
+
 export const Index = ({ }) =>
     <div className="index">
         <div className="content">
             <div className="title">
+                <img src={logo} />
                 Catfacts
             </div>
             <form>
