@@ -4,22 +4,18 @@ import "./Index.scss";
 
 import logo from "../../assets/logo.svg";
 
-export const Index = ({ }) =>
+export const Index = ({ fact }) =>
     <div className="index">
         <div className="content">
             <div className="title">
                 <img src={logo} />
                 Catfacts
             </div>
-            <form>
-                <textarea placeholder="Enter facts here..."></textarea>
-                <div className="buttons">
-                    <button value="start">start</button>
-                    <button value="stop">stop</button>
-                </div>
-            </form>
-            <div className="">
-
+            <div className="fact">
+                {fact}
+            </div>
+            <div className="buttons">
+                <button value="refresh" onClick={() => location.reload()}>refresh</button>
             </div>
         </div>
     </div>;

@@ -1,5 +1,9 @@
 @import "../common.scss";
 
+.fact {
+    text-align: center;
+}
+
 .index {
     height: 100%;
     min-height: 500px;
@@ -17,6 +21,12 @@
             font-family: "Bungee";
             font-size: 58px;
 
+            > img {
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+            }
+
             @media(max-width: 400px){
                 font-size: 12vh;
             }
@@ -30,15 +40,16 @@
             }
         }
 
+        @mixin d3border($size, $color) {
+            border: none;
+            border-bottom: $size solid $color;
+            border-radius: 10px;
+        }
+
+        $border-sz: 4px;
+
         > form {
 
-            $border-sz: 4px;
-
-            @mixin d3border($size, $color) {
-                border: none;
-                border-bottom: $size solid $color;
-                border-radius: 10px;
-            }
 
             > textarea {
                 margin: 0;
@@ -49,31 +60,31 @@
 
                 @include d3border($border-sz, darken(grey, 25%));
             }
+        }
 
-            .buttons {
-                display: flex;
-                justify-content: space-around;
+        .buttons {
+            display: flex;
+            justify-content: space-around;
 
-                button {
-                    color: white;
-                    border: none;
-                    flex-grow: 1;
+            button {
+                color: white;
+                border: none;
+                flex-grow: 1;
 
-                    margin: $border-sz $border-sz + 4;
-                    margin-left: 0;
-                    &:last-child {
-                        margin-right: 0;
-                    }
+                margin: $border-sz $border-sz + 4;
+                margin-left: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
 
-                    &[value=start] {
-                        background-color: lightskyblue;
-                        @include d3border($border-sz, darken(lightskyblue, 25%));
-                    }
+                &[value=refresh] {
+                    background-color: lightskyblue;
+                    @include d3border($border-sz, darken(lightskyblue, 25%));
+                }
 
-                    &[value=stop] {
-                        background-color: lightcoral;
-                        @include d3border($border-sz, darken(lightcoral, 25%));
-                    }
+                &[value=stop] {
+                    background-color: lightcoral;
+                    @include d3border($border-sz, darken(lightcoral, 25%));
                 }
             }
         }
