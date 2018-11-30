@@ -3,6 +3,7 @@
 .fact {
     text-align: center;
     max-width: 40ch;
+    font-size: 1.2em;
 }
 
 .index {
@@ -70,7 +71,6 @@
             button {
                 color: white;
                 border: none;
-                flex-grow: 1;
 
                 margin: $border-sz $border-sz + 4;
                 margin-left: 0;
